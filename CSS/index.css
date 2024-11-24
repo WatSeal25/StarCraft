@@ -1,25 +1,21 @@
-body, html {
+*{
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+ 
 }
 
 main {
     flex: 1;
 }
 
-body {
-    padding: 0px;
-    margin: 0px;
-    overflow-x: hidden;
-    width: 100%;
-    height: auto;
-   
 
-
-}
 
 header {
     position: fixed;
@@ -145,18 +141,14 @@ transition: 0.4s;
     display: none;
 }
 #background {
-    position: absolute;
-    height: 126vh;
-    width: 100%;
-    transform: scale(1.2);
-    left: 0%;
-    top: -18%;
-    background-position: center;
-    display: flex;
-    z-index: 1;
-
-
-
+    background-position: center center;
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; 
+ 
 
 }
 
@@ -165,7 +157,7 @@ transition: 0.4s;
     display: flex;
     top: 28vh;
     height: 40vh;
-    max-width: 500px;
+    background-position: center center;
     z-index: 1;
 
 
@@ -193,7 +185,7 @@ h1 {
 .background-text p {
     position: relative;
     display: flex;
-    top: 63vh;
+    top: 70vh;
     text-align: center;
     font-size: 1.1em;
     color: rgb(184, 187, 204);
@@ -204,12 +196,17 @@ h1 {
     text-shadow: 1px 1px 1px black;
 
 }
-#bg-fondo {
-   position: absolute; 
-width: 235vh;
-height: 150vh;
-left: -1vh;
-top: 57vh;
+.bg-image{
+    background-position: center center;
+    position: absolute; 
+    top: 100vh;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; 
+    align-items: center;
+  
+
 }
 
 h2 {
@@ -224,18 +221,19 @@ top: 105.5vh;
 line-height: 50px;
 right: 63vh;
 letter-spacing: 2.5px;
-
+}
 
 .background-concept {
 display: flex;
-max-width: 600px;
-min-width: 200px;
-justify-content: center;
+justify-content: space-between;
+align-items: center;
+text-align: left;
+
 }
-}
+
 .background-concept p {
 position: relative;
-top: 103vh;
+top: 110vh;
 right: 63vh;
 font-size: 1.3em;
 color: rgb(184, 187, 204);
@@ -243,34 +241,35 @@ line-height: 27px;
 text-shadow: 1px 1px 1px black;
 }
 
+.video-container {
+    position: absolute;      /* Lo posicionamos fuera del flujo normal */
+    top: 0;
+    right: 20px;             /* Lo movemos hacia la derecha, con espacio */
+    width: 50vw;             /* El video ocupa el 50% del ancho */
+    height: 100%;            /* El video ocupa todo el alto */
+    z-index: 1;   
+    align-items: center;
+}
+
 #announcement {
-position: absolute;   
-z-index: 1;
-top: 132vh;
-right: 13vh;
-width: 108.5vh;
-height: 65vh;
+    position: relative;
+    width: 100%;
+    min-height: 60vh;
+top: 120vh;
 border-radius: 3vh;
 cursor: pointer;
 z-index: 2;
 display: flex;
-justify-content: center;
+justify-content: flex-end;
+align-items: center;
+padding-right: 20px;
+object-fit: cover;
 
 
 
 
 }
 
-
-#border {
-position: absolute;
-top: 127.5vh;
-z-index: 2;
-width: 113vh;
-height: 73vh;
-left: 106vh;
-
-}
 .divisor img{
 
 position: absolute;
@@ -291,7 +290,7 @@ height: 132vh;
 
 }
 .c-titulo h2 {
-top: 115vh;
+top: 160vh;
 text-align: center;
 display: flex;
 left: 30vw;
@@ -303,7 +302,7 @@ line-height: 45px;
 
 .c-titulo p {
 position: absolute;
-    top: 238vh;
+    top: 235vh;
     font-size: 1.3em;
 color: rgb(184, 187, 204);
 line-height: 27px;
@@ -313,39 +312,10 @@ text-shadow: 1px 1px 1px black;
 
 }
 
-.border-four {
-    position: relative;
-top: 138vh;
-left: 5.5vh;
-gap: 38px;
-display: flex;
-
-}
-
-#border-1 {
-    
-width: 21.1vw;
-height: 28vh;
-}
-
-#border-2 {
-    width: 21.1vw;
-height: 28vh;
-}
-
-#border-3 {
-    width: 21.1vw;
-height: 28vh;
-}
-
-#border-4 {
-    width: 21.1vw;
-height: 28vh;
-}
 
 .image-four {
     position: relative;
-    top: 111.7vh;
+    top: 190vh;
     left: 6.3vh;
     gap: 50.3px;
     display: flex;
@@ -381,19 +351,19 @@ height: 28vh;
 
 display: flex;
 position: absolute;
-top: 277vh;
+top: 250vh;
 list-style: none;
 color: white;
 text-shadow: 1px 1px 1px black;
 gap: 205px;
-left: 12vh;
+left: 18vh;
 font-size: 1.21em;
 text-align: center;
 
 }
 .c-parrafo {
     position: relative;
-top: 124vh;
+top: 195vh;
 display: flex;
 left: 8vh;
 gap: 80px;
@@ -404,7 +374,7 @@ text-shadow: 1px 1px 1px black;
 }
 #titulo-multi {
     position: relative;
-    right: 14vh;
+    right: 12vh;
 
 }
 #trama-epica {
@@ -423,95 +393,6 @@ text-shadow: 1px 1px 1px black;
         
     }
 
-.gallery-fondo {
-    position: relative;
-    top: 132vh;
-    height: 70vh;
-   
-
-}
-.Galeria h2 {
-position: absolute;
-top: 337vh;
-right: 87vh;
-
-}
-
-.Galeria h3{
-font-size: 1.4em;
-}
-.ropa {
-position: absolute;
-top: 347.5vh;
-left: 8vh;
-color: rgb(0, 238, 52);
-font-size: 1.3em;
-
-}
-
-.ropa img {
-border: 2.5px solid rgb(0, 255, 64);
-cursor: pointer;
-}
-.ropa img:hover {
-    border: 7px solid yellow;
-    filter: sepia(40%);
-    
-}
-.ropa ul{
-display: flex;
-list-style: none;
-gap: 200px;
-position: absolute;
-left: -2vh;
-text-align: center;
-
-}
-.ropa li {
-color: white;
-}
- .peluches  {
-position: absolute;
-top: 435vh;
-
- }
- .peluches h3 {
-font-size: 1.8em;
-color: rgb(0, 238, 52);
-left: 8vh;
-position: absolute;
-top: -10vh;
- }
-
- .peluches ul {
-    position: absolute;
-display: flex;
-list-style: none;
-gap: 200px;
-text-align: center;
-left: 10vh;
-border: 1px;
-
-}
-.peluches img {
-position: relative;
-top: 0vh;
-left: -4vh;
-border: 2.5px solid rgb(0, 255, 64);
-cursor: pointer;
-
-}
-.peluches img:hover {
-border: 7px solid yellow;
-filter: sepia(40%);
-
-}
-.peluches li{
-color: white;
-font-size: 1.3em;
-
-
-}
 
 
 @media (max-width: 768px) {
@@ -533,7 +414,7 @@ background-color: #202020;
     color: white;
     padding: 20px 0;
     text-align: center;
-    top: 235vh;
+    top: 200vh;
     z-index: 3;
     right: 2vh;
     margin: 10px;
